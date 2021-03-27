@@ -1,29 +1,92 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Router from 'vue-router'
+import Home from '@/views/home/Home.vue'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+export default new Router({
+  routes: [
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home,
+      meta: {
+        showFooterBar: true,
+      },
+    },
+    {
+      path: '/order',
+      name: 'Order',
+      component: () => import('@/views/order/Order.vue'),
+      meta: {
+        showFooterBar: true,
+      },
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: () => import('@/views/search/Search.vue'),
+      meta: {
+        showFooterBar: true,
+      },
+    },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: () => import('@/views/profile/Profile.vue'),
+      meta: {
+        showFooterBar: true,
+      },
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: () => import('@/views/login/Login.vue'),
+      meta: {
+        showFooterBar: false,
+      },
+    },
+    {
+      path: '/userinfo',
+      name: 'UserInfo',
+      component: () => import('@/views/userinfo/UserInfo.vue'),
+      meta: {
+        showFooterBar: true,
+      },
+    },
+    {
+      path: '/detail',
+      name: 'Detail',
+      component: () => import('@/views/detail/Detail.vue'),
+      meta: {
+        showFooterBar: false,
+      },
+      children: [
+        {
+          path: 'food',
+          component: () => import('@/views/detail/components/Food.vue'),
+          name: 'Food',
+        },
+        {
+          path: 'comments',
+          component: () => import('@/views/detail/components/Comments.vue'),
+          name: 'Comments',
+        },
+        {
+          path: 'store',
+          component: () => import('@/views/detail/components/Store.vue'),
+          name: 'Store',
+        },
+        {
+          path: '',
+          redirect: 'food'
+        },
+      ]
+    },
+    {
+      path: '/',
+      redirect: '/home',
+    },
+  ],
+  mode: 'history'
 })
-
-export default router
