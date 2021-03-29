@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-tabs v-model="active" @click="onClick">
+    <van-tabs v-model="active" @click="onClick" color='green'>
       <van-tab title="点餐"></van-tab>
       <van-tab title="评价"></van-tab>
       <van-tab title="商家"></van-tab>

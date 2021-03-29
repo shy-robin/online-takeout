@@ -7,7 +7,7 @@ import './mock/mockServer.js'
 import {
   Button, Cell, CellGroup, Dialog, Toast, Switch,
   Tabbar, TabbarItem, Icon, Lazyload, Tabs, Tab,
-  Overlay, Popup
+  Overlay, Popup, Sidebar, SidebarItem, Card, Badge
 } from 'vant'
 
 // Vue.use(LazyLoad,{
@@ -28,6 +28,10 @@ Vue.use(Tabs)
 Vue.use(Tab)
 Vue.use(Overlay)
 Vue.use(Popup)
+Vue.use(Sidebar)
+Vue.use(SidebarItem)
+Vue.use(Card)
+Vue.use(Badge)
 
 Vue.config.productionTip = false
 

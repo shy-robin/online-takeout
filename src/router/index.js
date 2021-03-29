@@ -64,17 +64,17 @@ export default new Router({
       children: [
         {
           path: 'food',
-          component: () => import('@/views/detail/components/Food.vue'),
+          component: () => import('@/views/detail/components/food/Food.vue'),
           name: 'Food',
         },
         {
           path: 'comments',
-          component: () => import('@/views/detail/components/Comments.vue'),
+          component: () => import('@/views/detail/components/comments/Comments.vue'),
           name: 'Comments',
         },
         {
           path: 'store',
-          component: () => import('@/views/detail/components/Store.vue'),
+          component: () => import('@/views/detail/components/store/Store.vue'),
           name: 'Store',
         },
         {

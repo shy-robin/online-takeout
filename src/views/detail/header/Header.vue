@@ -62,7 +62,7 @@
         </div>
       </div>
     </van-overlay>
-    <div class="discount" @click="isShowDiscount=true">
+    <div class="discount" @click="isShowDiscount=true" v-if="storeInfo.supports">
       <span class="firstOrder">{{storeInfo.supports[0].name}}</span>
       <span>{{storeInfo.supports[0].content}}</span>
       <div class="right">
