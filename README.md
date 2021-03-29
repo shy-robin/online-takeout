@@ -1,19 +1,15 @@
-# online-takeout
+## 首页
 
-## Project setup
-```
-npm install
-```
+![](https://gitee.com/gainmore/imglib/raw/master/img/20210329190651.png)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 我的
 
-### Compiles and minifies for production
-```
-npm run build
-```
+![](https://gitee.com/gainmore/imglib/raw/master/img/20210329190825.png)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 登录
+
+![](https://gitee.com/gainmore/imglib/raw/master/img/20210329190848.png)
+
+## 商品详情
+
+![](https://gitee.com/gainmore/imglib/raw/master/img/20210329190918.png)
